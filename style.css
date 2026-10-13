@@ -1,4 +1,4 @@
-.flex-container{
+/* .flex-container{
  display: flex;
  flex-wrap: wrap;
 }
@@ -12,7 +12,6 @@
 .grid-container{
  display: grid;
  grid-template-columns: repeat(4,1fr);
- /* grid-template-rows: 1000px 200px 300px 20px 80px; */
  gap: 20px;
  justify-content: space-around;
  
@@ -26,4 +25,59 @@
 .class-7{
  grid-row : span 6;
  grid-column: span 2;
+} */
+
+
+
+.container>*{
+  padding: 20px;
+  border: 2px solid red;
+  margin: 10px;
+}
+
+header{
+  grid-area: header;
+}
+
+nav{
+ grid-area: nav;
+}
+
+main{
+ grid-area: main;
+}
+
+#first-article{
+ grid-area: article1;
+}
+#second-article{
+ grid-area: article2;
+}
+footer{
+ grid-area: footer;
+}
+
+.container{
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "nav nav nav nav"
+  "article1 main main article2"
+  "footer footer footer footer"
+  
+  ;
+}
+
+
+
+@media screen and (max-width: 575px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "article1"
+      "main"
+      "article2"
+      "footer";
+  }
 }
