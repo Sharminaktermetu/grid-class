@@ -1,0 +1,29 @@
+.flex-container{
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.card{
+ padding: 10px;
+ border: 2px solid red;
+
+}
+
+.grid-container{
+ display: grid;
+ grid-template-columns: repeat(4,1fr);
+ /* grid-template-rows: 1000px 200px 300px 20px 80px; */
+ gap: 20px;
+ justify-content: space-around;
+ 
+
+}
+
+.different{
+ grid-row: span 2;
+}
+
+.class-7{
+ grid-row : span 6;
+ grid-column: span 2;
+}
